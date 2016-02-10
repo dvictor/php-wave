@@ -16,7 +16,7 @@ $duration = .3;
 
 $wav = new Wave(44100);
 for ($i=0; $i<count($song); $i++)
-    $wav->addTone($song, $duration);
+    $wav->addTone($song[$i], $duration);
 header('X-Debug-info: '.join(',', $song));
 $wav->outMp3();
 ```
